@@ -1,4 +1,4 @@
-File Date,12/10/2021
+File Date,12/11/2021
 NPA_ID,type_of_code,ASSIGNABLE,EXPLANATION,RESERVED,ASSIGNED,ASSIGNMENT_DT,USE,LOCATION,COUNTRY,IN_SERVICE,IN_SERVICE_DT,STATUS,PLANNING_LETTERS,"NOTES",OVERLAY,OVERLAY_COMPLEX,PARENT_NPA_ID,SERVICE,TIME_ZONE,AREA_SERVED,MAP,IN_JEOPARDY,RELIEF_PLANNING_IN_PROGRESS,HOME_NPA_LOCAL_CALLS,HOME_NPA_TOLL_CALLS,FOREIGN_NPA_LOCAL_CALLS,FOREIGN_NPA_TOLL_CALLS,PERM_HNPA_LOCAL_CALLS,PERM_HNPA_TOLL_CALLS,PERM_HNPA_FOREIGN_LOCAL_CALLS,"DIALING_PLAN_NOTES"
 200,Easily Recognizable Code,Yes,,No,No,,N,,,N,,,,"",,,,,,,,,No,,,,,,,,""
 201,General Purpose Code,Yes,,No,Yes,01-JAN-47,G,NJ,US,Y,01-JAN-47,,277,"",Yes,201/551,,,E,,277,No,No,10D,10D,1+10D,1+10D,1+10D,NA,NA,"Calls between the 551 and 201 NPAs may be dialed as 10D."
@@ -63,7 +63,7 @@ NPA_ID,type_of_code,ASSIGNABLE,EXPLANATION,RESERVED,ASSIGNED,ASSIGNMENT_DT,USE,L
 260,General Purpose Code,Yes,,No,Yes,20-JUN-01,G,IN,US,Y,15-JAN-02,,309 296,"",No,,219,,E,,309,No,No,7D,1+10D,10D,1+10D,NA,NA,NA,""
 261,General Purpose Code,Yes,,Yes,No,,G,,,N,,,,"",No,,,,,,,No,No,,,,,,,,""
 262,General Purpose Code,Yes,,No,Yes,19-MAR-99,G,WI,US,Y,25-SEP-99,Active,556 544 174,"",No,,414,,C,,,No,Yes,10D,1+10D,1+10D,1+10D,1+10D,NA,NA,"Enforcement of mandatory dialing is 7/15/2022. 1+10 digit permissible at service provider discretion."
-263,General Purpose Code,Yes,,No,Yes,10-NOV-21,G,QUEBEC,CANADA,N,22-OCT-22,Active,572,"",No,263/438/514,514,,E,Montreal, Quebec, Canada,No,No,10D,1+10D,10D,1+10D,NA,NA,NA
+263,General Purpose Code,Yes,,No,Yes,10-NOV-21,G,QUEBEC,CANADA,N,22-OCT-22,Active,572,"",No,263/438/514,514,,E,Montreal Quebec Canada,572,No,No,10D,1+10D,10D,1+10D,NA,NA,NA,""
 264,General Purpose Code,Yes,,No,Yes,,G,ANGUILLA,ANGUILLA,Y,31-MAR-97,,015,"",No,,809,,A,,,No,No,7D,1+10D,NA,1+10D,4D,NA,NA,""
 265,General Purpose Code,Yes,,Yes,No,,G,,,N,,,,"",No,,,,,,,No,No,,,,,,,,""
 266,Easily Recognizable Code,Yes,,No,No,,N,,,N,,,,"",,,,,,,,,No,,,,,,,,""
