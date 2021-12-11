@@ -1,0 +1,84 @@
+{% extends "base_template.html" %}
+{% block content %}
+<h2><font color="darkblue">Search</font></h2>
+<font color="darkblue">AreaCode</font><br>
+<form action="/areacodes?npa=">
+    <input type="text" name="npa" maxlength=3 placeholder="641" size="3">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<font color="darkblue">AreaCode-OfficeCode</font><br>
+<form action="/officecodes?npa-nxx=">
+    <input type="text" name="npa-nxx" maxlength=7 placeholder="641-522" size="7">
+    <input type="submit" value="Submit">
+</form>
+
+<br><br><br>
+<h2><font color="darkblue">Area Codes, Rate Centers, and Operating Companies</font></h2>
+<h3><font color="black">US States:</font></h3>
+
+<form name="state" action="/acmaps?state=">
+    <font size="3">(<b>AreaCodes)</b> by State</font><br>
+    <select name="state">
+        {% for key, value in States.items() %}
+            <option value={{key}}>{{value}}: {{key}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<form name="staterc" action="/rcstate?rcs=">
+    <font size="3">(<b>RateCenters)</b> by State</font><br>
+    <select name="rcs">
+        {% for key, value in States.items() %}
+            <option value={{key}}>{{value}}: {{key}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<form name="statecomp" action="/compstate?cs=">
+    <font size="3">(<b>Operating Companies)</b> by State</font><br>
+    <select name="cs">
+        {% for key, value in States.items() %}
+            <option value={{key}}>{{value}}: {{key}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<h3><font color="black">US Territories:</font></h3>
+{% for key, value in USTerritory.items() %}
+    <a href="{{LinkACMaps}}{{key}}">{{key}}</a>: {{value}}<br>
+{% endfor %}
+<br>
+<h3><font color="black">Canada Province/Territory:</font></h3>
+{% for key, value in CanadaPTAbbr.items() %}
+    <a href="{{LinkACMaps}}{{value}}">{{value}}</a>: {{key}}<br>
+{% endfor %}
+<br>
+<h3><font color="black">Countries:</font></h3>
+{% for key, value in Country.items() %}
+    <a href="{{LinkACMaps}}{{key}}">{{key}}</a>: {{value}}<br>
+{% endfor %}
+<br><br><br>
+<h2><font color="darkblue">Other</font></h2>
+<font color="darkblue">Feature Group D CIC Codes</font><br>
+<form action="/fgdcic?cic=">
+    <input type="text" name="cic" maxlength=4 placeholder="0222" size="4">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<a href="{{LinkHome}}/fgbcic?cic=">List: Feature Group B CIC Codes</a>
+<br>
+<a href="{{LinkHome}}/n11?n11=">List: N11 Codes</a>
+<br>
+<a href="{{LinkHome}}/5xx?5xxlist=">List: 5xx Codes</a>
+<br>
+<a href="{{LinkHome}}/900?900list=">List: 900 Codes</a>
+<br>
+<a href="{{LinkHome}}/aclist">List of AreaCodes sorted by NPA</a><br>
+<a href="{{LinkHome}}/companyall?">List of all Operating Companies in the US &nbsp(sorted by Company / State)</a>
+&nbsp&nbsp <font color="red">**Takes ~15 seconds to generate.</font>
+{% endblock content %}
