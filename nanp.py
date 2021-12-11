@@ -161,27 +161,27 @@ Country = {
 if os.path.isfile(FilePath + 'pn.db'):
     fileCreation = os.path.getctime(FilePath + 'pn.db')
     # Here we need to release pn.db or it will show 'in use' when trying to rename it...
-if fileCreation < days_old:
-    if os.path.isfile(FilePath + 'old_pn.db'):
-        os.remove(FilePath + 'old_pn.db')
-    if os.path.isfile(FilePath + 'pn.db'):
-        os.renames(FilePath + 'pn.db', FilePath + 'old_pn.db')
-    if os.path.isfile(FilePath + 'old_npa_report.csv'):
-        os.remove(FilePath + 'old_npa_report.csv')
-    if os.path.isfile(FilePath + 'npa_report.csv'):
-        os.renames(FilePath + 'npa_report.csv', FilePath + 'old_npa_report.csv')
-    if os.path.isfile(FilePath + 'old_allutlzd.txt'):
-        os.remove(FilePath + 'old_allutlzd.txt')
-    if os.path.isfile(FilePath + 'allutlzd.txt'):
-        os.renames(FilePath + 'allutlzd.txt', FilePath + 'old_allutlzd.txt')
-    if os.path.isfile(FilePath + 'allutlzd.zip'):
-        os.remove(FilePath + 'allutlzd.zip')
-    if os.path.isfile(FilePath + 'old_COCodeStatus_ALL.csv'):
-        os.remove(FilePath + 'old_COCodeStatus_ALL.csv')
-    if os.path.isfile(FilePath + 'COCodeStatus_ALL.csv'):
-        os.renames(FilePath + 'COCodeStatus_ALL.csv', FilePath + 'old_COCodeStatus_ALL.csv')
-    if os.path.isfile(FilePath + 'COCodeStatus_ALL.zip'):
-        os.remove(FilePath + 'COCodeStatus_ALL.zip')
+    if fileCreation < days_old:
+        if os.path.isfile(FilePath + 'old_pn.db'):
+            os.remove(FilePath + 'old_pn.db')
+        if os.path.isfile(FilePath + 'pn.db'):
+            os.renames(FilePath + 'pn.db', FilePath + 'old_pn.db')
+        if os.path.isfile(FilePath + 'old_npa_report.csv'):
+            os.remove(FilePath + 'old_npa_report.csv')
+        if os.path.isfile(FilePath + 'npa_report.csv'):
+            os.renames(FilePath + 'npa_report.csv', FilePath + 'old_npa_report.csv')
+        if os.path.isfile(FilePath + 'old_allutlzd.txt'):
+            os.remove(FilePath + 'old_allutlzd.txt')
+        if os.path.isfile(FilePath + 'allutlzd.txt'):
+            os.renames(FilePath + 'allutlzd.txt', FilePath + 'old_allutlzd.txt')
+        if os.path.isfile(FilePath + 'allutlzd.zip'):
+            os.remove(FilePath + 'allutlzd.zip')
+        if os.path.isfile(FilePath + 'old_COCodeStatus_ALL.csv'):
+            os.remove(FilePath + 'old_COCodeStatus_ALL.csv')
+        if os.path.isfile(FilePath + 'COCodeStatus_ALL.csv'):
+            os.renames(FilePath + 'COCodeStatus_ALL.csv', FilePath + 'old_COCodeStatus_ALL.csv')
+        if os.path.isfile(FilePath + 'COCodeStatus_ALL.zip'):
+            os.remove(FilePath + 'COCodeStatus_ALL.zip')
 
 # will download the file if it's missing.
 if not os.path.isfile(FilePath + 'npa_report.csv'):
